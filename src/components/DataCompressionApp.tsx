@@ -1,17 +1,16 @@
-import { ArrowUpZA, Download, FileText, Image, Info, Zap } from "lucide-react";
 import { useCallback, useState } from "react";
-import { GolombCompressor, HuffmanCompressor, ImageQuantizer, LZWCompressor, RLECompressor } from "../compression/algorithms";
+import { ArrowUpZA, Download, FileText, Image, Info, Zap } from "lucide-react";
+import type { CompressionMode, CompressionResult, LosslessAlgorithm } from "../types";
+
+import RLECompressor from "../algorithms/RLECompressor";
+import HuffmanCompressor from "../algorithms/HuffmanCompressor";
+import GolombCompressor from "../algorithms/GolombCompressor";
+import LZWCompressor from "../algorithms/LZWCompressor";
+import ImageQuantizer from "../algorithms/ImageQuantizer";
 
 
-type CompressionMode = 'lossless' | 'lossy' | null;
-type LosslessAlgorithm = 'rle' | 'huffman' | 'golomb' | 'lzw';
-type CompressionResult = {
-    originalSize: number;
-    compressedSize: number;
-    compressionRatio: number;
-    data: string | ImageData;
-    algorithm?: string;
-};
+
+
 
 export default function DataCompressionApp() {
     const [mode, setMode] = useState<CompressionMode>(null);
