@@ -218,9 +218,3 @@ src/
 - **Text compression**: < 100ms for files up to 1MB
 - **Image quantization**: < 500ms for images up to 5MB
 - **Decompression**: ~1.5x compression time
-
-
-
-**Made with ❤️ by [Your Name/Team]**
-
-*Last updated: November 2024*
