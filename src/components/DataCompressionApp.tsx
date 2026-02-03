@@ -19,7 +19,7 @@ export default function DataCompressionApp() {
     const [compressedData, setCompressedData] = useState('');
     const [decompressedData, setDecompressedData] = useState('');
     const [result, setResult] = useState<CompressionResult | null>(null);
-    const [imageFile, setImageFile] = useState<File | null>(null);
+    const [_, setImageFile] = useState<File | null>(null);
     const [originalImage, setOriginalImage] = useState<string | null>(null);
     const [compressedImage, setCompressedImage] = useState<string | null>(null);
     const [quality, setQuality] = useState(50);
